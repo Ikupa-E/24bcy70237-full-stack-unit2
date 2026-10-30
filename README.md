@@ -1,6 +1,6 @@
 # Post Scheduler - Full Stack Project
 
-## Experiment 1: REST APIs with Spring Boot
+## Experiment 2.1.1: REST APIs with Spring Boot
 Run: `mvn spring-boot:run`  (Java 17+, Maven)
 Base URL: http://localhost:8080/api/v1/posts
 H2 console: http://localhost:8080/h2-console  (jdbc:h2:mem:postdb, user: sa, no password)
@@ -32,7 +32,7 @@ Invalid request (title too short, author blank) returns 400:
 
 ---
 
-## Experiment 2: Global Exception Handling and Structured Logging
+## Experiment 2.1.2: Global Exception Handling and Structured Logging
 
 New/changed files
 - NEW     filter/CorrelationIdFilter.java          (assigns X-Correlation-Id, stores it in MDC)
@@ -57,7 +57,7 @@ Logs are written to the console and to logs/post-scheduler.log.
 
 ---
 
-## Experiment 3: Pagination and Sorting
+## Experiment 2.2.1: Pagination and Sorting
 
 New/changed files
 - NEW     dto/PageResponse.java, dto/PostSummaryResponse.java
@@ -78,7 +78,7 @@ The list returns PostSummaryResponse (content preview only); GET /{id} returns t
 
 ---
 
-## Experiment 4: Query Optimization and Caching
+## Experiment 2.2.2: Query Optimization and Caching
 
 New/changed files
 - CHANGED pom.xml (spring-boot-starter-cache, JCache API, Ehcache 3, MySQL driver)
@@ -109,7 +109,7 @@ JMeter: open jmeter/post-scheduler-load-test.jmx (4 thread groups run one after 
 
 ---
 
-## Experiment 5: JWT Authentication and Role-Based Access Control
+## Experiment 2.3.1: JWT Authentication and Role-Based Access Control
 
 Default accounts (created at startup): admin / Admin@123 (ADMIN) and user / User@123 (USER).
 Every endpoint except /auth/register and /auth/login now needs the header
@@ -134,7 +134,7 @@ Access rules
 
 ---
 
-## Experiment 6: Encryption, Secure Credential Storage and Token Lifecycle
+## Experiment 2.3.2: Encryption, Secure Credential Storage and Token Lifecycle
 
 No new dependencies (AES comes from the JDK). Tables social_accounts and refresh_tokens are created automatically.
 
